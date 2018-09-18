@@ -3,11 +3,12 @@
 # Drive Method
 
 class Buses
-  attr_reader :number,:destination
+  attr_reader :number,:destination, :passengers
 
   def initialize(number,destination)
     @number = number
     @destination = destination
+    @passengers = []
   end
 
   def drive(drive)
@@ -18,4 +19,20 @@ class Buses
       return "Stopped"
     end
   end
+
+  def pick_up(person)
+    @passengers << person
+  end
+
+  def drop_off(person)
+    if @passengers.include?(person)
+      @passengers.delete(person)
+    end
+  end
+
+  def unload
+    @passengers.clear
+  end
+
+
 end

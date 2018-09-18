@@ -16,4 +16,8 @@ class PassengerTest < MiniTest::Test
   def test_age()
     assert_equal("389",@people3.age)
   end
+
+
+
+
 end

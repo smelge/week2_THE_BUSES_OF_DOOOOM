@@ -6,4 +6,7 @@ class Person
     @age = age
   end
 
+  def name(name)
+    return @name
+  end
 end
